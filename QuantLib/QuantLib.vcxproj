@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
@@ -290,7 +290,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>      
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -523,12 +523,15 @@
     <ClInclude Include="ql\instruments\dividendbarrieroption.hpp" />
     <ClInclude Include="ql\instruments\vanillastorageoption.hpp" />
     <ClInclude Include="ql\instruments\vanillaswingoption.hpp" />
+    <ClInclude Include="ql\math\abcdmathfunction.hpp" />
     <ClInclude Include="ql\math\matrixutilities\bicgstab.hpp" />
     <ClInclude Include="ql\math\matrixutilities\sparseilupreconditioner.hpp" />
     <ClInclude Include="ql\math\matrixutilities\sparsematrix.hpp" />
     <ClInclude Include="ql\math\optimization\differentialevolution.hpp" />
+    <ClInclude Include="ql\math\polynomialmathfunction.hpp" />
     <ClInclude Include="ql\math\randomnumbers\sobolbrownianbridgersg.hpp" />
     <ClInclude Include="ql\math\richardsonextrapolation.hpp" />
+    <ClInclude Include="ql\math\tartaglia.hpp" />
     <ClInclude Include="ql\methods\all.hpp" />
     <ClInclude Include="ql\methods\finitedifferences\meshers\all.hpp" />
     <ClInclude Include="ql\methods\finitedifferences\meshers\concentrating1dmesher.hpp" />
@@ -1182,6 +1185,7 @@
     <ClInclude Include="ql\termstructures\yield\piecewisezerospreadedtermstructure.hpp" />
     <ClInclude Include="ql\termstructures\yield\quantotermstructure.hpp" />
     <ClInclude Include="ql\termstructures\yield\ratehelpers.hpp" />
+    <ClInclude Include="ql\termstructures\yield\tenorbasis.hpp" />
     <ClInclude Include="ql\termstructures\yield\zerocurve.hpp" />
     <ClInclude Include="ql\termstructures\yield\zerospreadedtermstructure.hpp" />
     <ClInclude Include="ql\termstructures\yield\zeroyieldstructure.hpp" />
@@ -1758,11 +1762,14 @@
     <ClCompile Include="ql\instruments\cpiswap.cpp" />
     <ClCompile Include="ql\instruments\dividendbarrieroption.cpp" />
     <ClCompile Include="ql\instruments\vanillaswingoption.cpp" />
+    <ClCompile Include="ql\math\abcdmathfunction.cpp" />
     <ClCompile Include="ql\math\matrixutilities\bicgstab.cpp" />
     <ClCompile Include="ql\math\matrixutilities\sparseilupreconditioner.cpp" />
     <ClCompile Include="ql\math\optimization\differentialevolution.cpp" />
+    <ClCompile Include="ql\math\polynomialmathfunction.cpp" />
     <ClCompile Include="ql\math\randomnumbers\sobolbrownianbridgersg.cpp" />
     <ClCompile Include="ql\math\richardsonextrapolation.cpp" />
+    <ClCompile Include="ql\math\tartaglia.cpp" />
     <ClCompile Include="ql\methods\finitedifferences\meshers\concentrating1dmesher.cpp" />
     <ClCompile Include="ql\methods\finitedifferences\meshers\exponentialjump1dmesher.cpp" />
     <ClCompile Include="ql\methods\finitedifferences\meshers\fdmblackscholesmesher.cpp" />
@@ -2180,6 +2187,7 @@
     <ClCompile Include="ql\termstructures\yield\nonlinearfittingmethods.cpp" />
     <ClCompile Include="ql\termstructures\yield\oisratehelper.cpp" />
     <ClCompile Include="ql\termstructures\yield\ratehelpers.cpp" />
+    <ClCompile Include="ql\termstructures\yield\tenorbasis.cpp" />
     <ClCompile Include="ql\termstructures\yield\zeroyieldstructure.cpp" />
     <ClCompile Include="ql\termstructures\inflation\inflationhelpers.cpp" />
     <ClCompile Include="ql\termstructures\inflation\seasonality.cpp" />

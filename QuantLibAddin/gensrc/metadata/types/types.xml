@@ -102,6 +102,13 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::Index</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Instrument</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::InterestRateIndex</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::TenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::IntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdIntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialIntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CubicIntegralTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation2D</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::LMMCurveState</DataType>
@@ -127,7 +134,9 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::PiecewiseConstantCorrelation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PiecewiseConstantVariance</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PlainVanillaPayoff</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PricingEngine</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdMathFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualFloatersCoupon</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RateHelper</DataType>
@@ -194,6 +203,7 @@
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Date</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Integer</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Natural</DataType>
+    <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::BigNatural</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Size</DataType>
     <DataType defaultSuperType='libraryType' nativeType='string'>QuantLib::Period</DataType>
 
@@ -207,6 +217,7 @@
 
     <DataType defaultSuperType='objectClass'>ObjectHandler::Group</DataType>
     <DataType defaultSuperType='objectClass'>ObjectHandler::Object</DataType>
+    
     <DataType defaultSuperType='objectClass'>QuantLibAddin::AssetSwap</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::Bond</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::BTP</DataType>
