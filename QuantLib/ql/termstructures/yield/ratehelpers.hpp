@@ -203,6 +203,7 @@ namespace QuantLib {
         void initializeDates();
         Date fixingDate_;
         Period periodToStart_;
+        Period periodToEnd_;
         boost::shared_ptr<IborIndex> iborIndex_;
         RelinkableHandle<YieldTermStructure> termStructureHandle_;
     };
