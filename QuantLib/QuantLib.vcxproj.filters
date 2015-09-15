@@ -3991,6 +3991,9 @@
     <ClInclude Include="ql\instruments\futures.hpp">
       <Filter>instruments</Filter>
     </ClInclude>
+    <ClInclude Include="ql\instruments\basisswap.hpp">
+      <Filter>instruments</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ql\methods\montecarlo\brownianbridge.cpp">
@@ -6426,6 +6429,9 @@
       <Filter>time</Filter>
     </ClCompile>
     <ClCompile Include="ql\instruments\futures.cpp">
+      <Filter>instruments</Filter>
+    </ClCompile>
+    <ClCompile Include="ql\instruments\basisswap.cpp">
       <Filter>instruments</Filter>
     </ClCompile>
   </ItemGroup>

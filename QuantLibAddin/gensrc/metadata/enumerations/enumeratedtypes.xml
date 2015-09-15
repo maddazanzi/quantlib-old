@@ -1532,6 +1532,21 @@
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
 
+    <EnumeratedTypeGroup type='QuantLib::BasisSwap::Type'>
+      <includeFile>oh/enumerations/typefactory.hpp</includeFile>
+      <constructor>true</constructor>
+      <EnumeratedTypes>
+        <EnumeratedType>
+          <string>Payer</string>
+          <value>QuantLib::BasisSwap::Payer</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>Receiver</string>
+          <value>QuantLib::BasisSwap::Receiver</value>
+        </EnumeratedType>
+      </EnumeratedTypes>
+    </EnumeratedTypeGroup>
+
     <EnumeratedTypeGroup type='QuantLib::Futures::Type'>
       <includeFile>oh/enumerations/typefactory.hpp</includeFile>
       <constructor>true</constructor>

@@ -28,6 +28,7 @@
     <DataType defaultSuperType='enumeration'>QuantLib::Settlement::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::OvernightIndexedSwap::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::VanillaSwap::Type</DataType>
+    <DataType defaultSuperType='enumeration'>QuantLib::BasisSwap::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Futures::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Weekday</DataType>
     <DataType defaultSuperType='enumeration'>QuantLibAddin::RateHelper::DepoInclusionCriteria</DataType>
@@ -157,6 +158,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::TypePayoff</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OvernightIndexedSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VanillaSwap</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::BasisSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VolatilityTermStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CreditDefaultSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CdsOption</DataType>

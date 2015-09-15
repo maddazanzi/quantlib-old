@@ -731,6 +731,7 @@
     <ClInclude Include="ql\instruments\averagetype.hpp" />
     <ClInclude Include="ql\instruments\barrieroption.hpp" />
     <ClInclude Include="ql\instruments\barriertype.hpp" />
+	<ClInclude Include="ql\instruments\basisswap.hpp" />
     <ClInclude Include="ql\instruments\basketoption.hpp" />
     <ClInclude Include="ql\instruments\bmaswap.hpp" />
     <ClInclude Include="ql\instruments\bond.hpp" />
@@ -1884,6 +1885,7 @@
     <ClCompile Include="ql\instruments\averagetype.cpp" />
     <ClCompile Include="ql\instruments\barrieroption.cpp" />
     <ClCompile Include="ql\instruments\barriertype.cpp" />
+	<ClCompile Include="ql\instruments\basisswap.cpp" />
     <ClCompile Include="ql\instruments\basketoption.cpp" />
     <ClCompile Include="ql\instruments\bmaswap.cpp" />
     <ClCompile Include="ql\instruments\bond.cpp" />

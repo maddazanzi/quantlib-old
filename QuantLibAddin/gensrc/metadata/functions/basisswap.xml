@@ -1,0 +1,339 @@
+<Category name='basisswap'>
+  <description>functions to construct and use BasisSwap objects.</description>
+  <displayName>Basis Swap</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <serializationIncludes>
+    <include>qlo/basisswap.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/indexes/swapindex.hpp</include>
+    <include>qlo/schedule.hpp</include>
+    <include>qlo/pricingengines.hpp</include>
+    <include>qlo/termstructures.hpp</include>
+
+    <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/indexes/swapindex.hpp</include>
+
+  </serializationIncludes>
+  <addinIncludes>
+    <include>qlo/basisswap.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/indexes/swapindex.hpp</include>
+    <include>qlo/schedule.hpp</include>
+    <include>qlo/pricingengines.hpp</include>
+    <include>qlo/termstructures.hpp</include>
+
+    <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/indexes/swapindex.hpp</include>
+
+  </addinIncludes>
+  <copyright>
+    Copyright (C) 2006, 2007, 2011, 2015 Ferdinando Ametrano
+    Copyright (C) 2005, 2006 Eric Ehlers
+    Copyright (C) 2005 Plamen Neykov
+    Copyright (C) 2005 Aurelien Chanudet
+    Copyright (C) 2015 Maddalena Zanzi
+  </copyright>
+  <Functions>
+
+    <Constructor name='qlBasisSwap'>
+      <libraryFunction>BasisSwap</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+	      <SupportedPlatform name='Calc'/>
+	       <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <processorName>InstrumentProcessor</processorName>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='PayerReceiver' default='"Payer"'>
+            <type>QuantLib::BasisSwap::Type</type>
+            <tensorRank>scalar</tensorRank>
+            <description>PAYER to pay the short tenor floating rate, RECEIVER to receive it.</description>
+          </Parameter>
+          <Parameter name='Nominal' default='100'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Notional Amount.</description>
+          </Parameter>
+          <Parameter name='ShortTenorSchedule' exampleValue='ShortTenorSchedule'>
+            <type>QuantLib::Schedule</type>
+            <superType>libraryClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>short tenor leg Schedule object ID.</description>
+          </Parameter>
+          <Parameter name='ShortTenorIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>short tenor leg IborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='ShortTenorDayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>short tenor leg day counter (e.g. Actual/360).</description>
+          </Parameter>
+          <Parameter name='ShortTenorSpread'>
+            <type>QuantLib::Spread</type>
+            <tensorRank>scalar</tensorRank>
+            <description>short tenor leg spread.</description>
+          </Parameter>
+          <Parameter name='LongTenorSchedule' exampleValue='LongTenorSchedule'>
+            <type>QuantLib::Schedule</type>
+            <superType>libraryClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>long tenor leg Schedule object ID.</description>
+          </Parameter>
+          <Parameter name='LongTenorIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>long tenor leg IborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='LongTenorDayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>long tenor leg day counter (e.g. Actual/360).</description>
+          </Parameter>
+          <Parameter name='LongTenorSpread' default='0.0'>
+            <type>QuantLib::Spread</type>
+            <tensorRank>scalar</tensorRank>
+            <description>long tenor leg spread.</description>
+          </Parameter>
+          <Parameter name='PaymentConvention' default='"Following"'>
+            <type>QuantLib::BusinessDayConvention</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Payment dates' business day convention.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlBasisSwapShortTenorLegBPS' type='QuantLib::BasisSwap'>
+      <description>returns the BPS of the short tenor leg for the given BasisSwap object.</description>
+      <libraryFunction>shortTenorLegBPS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapShortTenorLegNPV' type='QuantLib::BasisSwap'>
+      <description>returns the NPV of the short tenor leg for the given BasisSwap object.</description>
+      <libraryFunction>shortTenorLegNPV</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+	<SupportedPlatform name='Calc'/>
+	<!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapShortTenorFairSpread' type='QuantLib::BasisSwap'>
+      <description>returns the fair short tenor leg spread which would zero the swap NPV for the given BasisSwap object.</description>
+      <libraryFunction>shortTenorLegFairSpread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+	<SupportedPlatform name='Calc'/>
+	<!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapLongTenorLegBPS' type='QuantLib::BasisSwap'>
+      <description>returns the BPS of the long tenor leg for the given BasisSwap object.</description>
+      <libraryFunction>longTenorLegBPS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapLongTenorLegNPV' type='QuantLib::BasisSwap'>
+      <description>returns the NPV of the long tenor leg for the given BasisSwap object.</description>
+      <libraryFunction>longTenorLegNPV</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapLongTenorFairSpread' type='QuantLib::BasisSwap'>
+      <description>returns the fair long tenor leg spread which would zero the swap NPV for the given BasisSwap object.</description>
+      <libraryFunction>longTenorLegFairSpread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapType' type='QuantLib::BasisSwap'>
+      <description>returns the swap type (Payer or Receiver) of the given BasisSwap object.</description>
+      <libraryFunction>type</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::BasisSwap::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapNominal' type='QuantLib::BasisSwap'>
+      <description>returns the swap nominal for the given BasisSwap object.</description>
+      <libraryFunction>nominal</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+	<SupportedPlatform name='Calc'/>
+	<!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapShortTenorSpread' type='QuantLib::BasisSwap'>
+      <description>returns the short tenor leg spread for the given BasisSwap object.</description>
+      <libraryFunction>shortTenorSpread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+	<SupportedPlatform name='Calc'/>
+	<!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapShortTenorDayCount' type='QuantLib::BasisSwap'>
+      <description>returns the short tenor leg day count convention for the given BasisSwap object.</description>
+      <libraryFunction>shortTenorDayCount</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::DayCounter</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapLongTenorSpread' type='QuantLib::BasisSwap'>
+      <description>returns the long tenor leg spread for the given BasisSwap object.</description>
+      <libraryFunction>longTenorSpread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapLongTenorDayCount' type='QuantLib::BasisSwap'>
+      <description>returns the long tenor leg day count convention for the given BasisSwap object.</description>
+      <libraryFunction>longTenorDayCount</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::DayCounter</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlBasisSwapPaymentConvention' type='QuantLib::BasisSwap'>
+      <description>returns the payment business day convention for the given VanillaSwap object.</description>
+      <libraryFunction>paymentConvention</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::BusinessDayConvention</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+  </Functions>
+</Category>
