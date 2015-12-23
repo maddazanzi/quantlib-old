@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="enumerations">
@@ -837,6 +837,9 @@
     <ClCompile Include="qlo\settings.cpp" />
     <ClCompile Include="qlo\timeseries.cpp" />
     <ClCompile Include="qlo\utilities.cpp" />
+    <ClCompile Include="qlo\basisswap.cpp">
+      <Filter>Instruments</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qlo\enumerations\register\register_all.hpp">
@@ -1723,6 +1726,8 @@
     <ClInclude Include="qlo\timeseries.hpp" />
     <ClInclude Include="qlo\utilities.hpp" />
     <ClInclude Include="qlo\vcconfig.hpp" />
+    <ClInclude Include="qlo\basisswap.hpp">
+      <Filter>Instruments</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
-
